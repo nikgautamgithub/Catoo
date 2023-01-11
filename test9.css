@@ -1,0 +1,87 @@
+*,html{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nabla',monospace;
+    text-align: center;
+}
+
+body{
+    font-size: 2vmax;
+    background: linear-gradient(256deg, rgba(195,34,34,1) 0%, rgba(45,50,253,1) 100%);
+}
+
+/*               Title               */
+#title{
+    margin-top: 1%;
+    margin-bottom: 0.9rem;
+}
+
+/*               Image               */
+.cat{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img{
+    border-radius: 2%;
+    box-shadow: 6px 10px 12px rgba(0, 0, 0, 0.5);
+}
+
+.below-image{
+    margin-top: 2%;
+}
+
+/*               Button              */
+.button-div{
+    margin-top: 40px;
+    margin-bottom: 1%;
+}
+
+button{
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 2%;
+  font-size: 1.4rem;
+  border-radius: 10px;
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);;
+  opacity: 0.7;
+}
+
+button:hover{
+    background: currentColor;
+    border: 2px solid rgba(240, 248, 255,50%);
+    border-radius: 10px;
+    opacity: 1;
+}
+
+/*                 Cards               */
+.liked-photos{
+    overflow: hidden;
+    list-style: none;
+}
+
+.cards {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 50px;
+    width: 20rem;
+    height: 10em;
+    border-radius: 4%;
+}
+
+.liked-photos > li > button{
+    float: right;
+    font-family: sans-serif;
+    font-size: 1rem;
+    width: 2rem;
+    background-color: rgba(255, 0, 0,0.8);
+}
+
+@media screen and (max-width: 650px){
+    .cat > img{
+        height: 250px;
+    }
+}
