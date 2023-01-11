@@ -37,17 +37,24 @@ const likedPhotos = document.querySelector(".liked-photos");
 const addPhoto = url => {
     localStorage.setItem(url, 1);
 
-    let imgDiv = document.createElement('li');
-    imgDiv.className = 'img cards';
-    imgDiv.style.backgroundImage = `url(${url})`;
-    imgDiv.style.backgroundSize = 'cover';
+    let imgList = document.createElement('li');
+    imgList.className = 'img cards';
+    imgList.style.backgroundImage = `url(${url})`;
+    imgList.style.backgroundSize = 'cover';
     
     let button = document.createElement('button');
     button.innerText = 'X';
     button.className = 'del-button';
-    imgDiv.appendChild(button);
+    imgList.appendChild(button);
 
-    likedPhotos.appendChild(imgDiv);
+    let download = document.createElement('a');
+    download.href = url;
+    download.target = '_blank';
+    download.download = '';
+    download.innerText = '✔';
+    imgList.appendChild(download);
+
+    likedPhotos.appendChild(imgList);
 };
 
 //delete photo URL from the local storage
